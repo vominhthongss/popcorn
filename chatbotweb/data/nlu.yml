@@ -1,0 +1,362 @@
+version: "2.0"
+
+nlu:
+- intent: greet #(intent 0)
+  examples: |
+    - ê
+    - chào
+    - hú
+    - chào bạn
+    - hey
+    - hello
+    - hi
+    - xin chào
+    - lô
+    - này
+    - chào b
+    - chào bot
+    - chào bắp
+    - chào bé bắp
+
+# hỏi phim theo nội dung 
+- intent: ask_search_by_movie_content #(intent 1)
+  examples: |
+    - phim gì mà có
+    - phim mà có
+    - phim mà có nhân vật tên
+    - phim gì có ai đóng đó
+    - phim có nhân vật tên gì đó
+    - phim mà có nội dung là
+
+# hỏi phim theo diễn viên
+- intent: ask_search_by_movie_actor #(intent 2)
+  examples: |
+    - phim gì mà diễn viên là
+    - phim diễn viên
+    - đóng phim nào
+    - đóng phim gì
+    - phim có đóng
+    - phim có đóng á
+    - đóng phim nào
+    - phim có tham gia
+    - phim có tham gia á
+# hỏi phim theo thể loại hay nhất
+ #(intent 3)
+
+- intent: ask_best_film_by_genre
+  examples: |
+    - phim [kinh dị](phim_cag) hay nhất
+    - phim [kinh dị](phim_cag) cực hay
+    - phim [kinh dị](phim_cag) đáng xem
+    - phim [kinh dị](phim_cag) imdb cao
+    - phim [viễn tưởng](phim_cag) hay nhất
+    - phim [viễn tưởng](phim_cag) cực hay
+    - phim [viễn tưởng](phim_cag) đáng xem
+    - phim [viễn tưởng](phim_cag) imdb cao
+    - phim [siêu anh hùng](phim_cag) hay nhất
+    - phim [siêu anh hùng](phim_cag) cực hay
+    - phim [siêu anh hùng](phim_cag) đáng xem
+    - phim [siêu anh hùng](phim_cag) imdb cao
+    - phim [chính kịch](phim_cag) hay nhất
+    - phim [chính kịch](phim_cag) cực hay
+    - phim [chính kịch](phim_cag) imdb cao
+    - phim [chính kịch](phim_cag) đáng xem
+    - phim [hành động](phim_cag) hay nhất
+    - phim [hành động](phim_cag) cực hay
+    - phim [hành động](phim_cag) imdb cao
+    - phim [hành động](phim_cag) đáng xem
+    - phim [gia đình](phim_cag) hay nhất
+    - phim [gia đình](phim_cag) cực hay
+    - phim [gia đình](phim_cag) imdb cao
+    - phim [gia đình](phim_cag) đáng xem
+    - phim [hài](phim_cag) hay nhất
+    - phim [hài](phim_cag) cực hay
+    - phim [hài](phim_cag) đáng xem
+    - phim [hài](phim_cag) imdb cao
+    - phim [gây cấn](phim_cag) hay nhất
+    - phim [gây cấn](phim_cag) cực hay
+    - phim [gây cấn](phim_cag) đáng xem
+    - phim [gây cấn](phim_cag) imdb cao
+    - phim [tình cảm](phim_cag) hay nhất
+    - phim [tình cảm](phim_cag) cực hay
+    - phim [tình cảm](phim_cag) đáng xem
+    - phim [tình cảm](phim_cag) imdb cao
+    - phim [trinh thám](phim_cag) hay nhất
+    - phim [trinh thám](phim_cag) cực hay
+    - phim [trinh thám](phim_cag) đáng xem
+    - phim [trinh thám](phim_cag) imdb cao
+    
+# hỏi gói xem phim 
+- intent: ask_plan #(intent 4)
+  examples: |
+    - gói nào
+    - mua gói
+    - tôi muốn mua gói xem phim
+    - giá các gói xem phim
+    - gói phim
+    - mua các gói
+    - gói gì
+    - các loại gói
+    - gói gì đó
+    - thông tin các gói
+    - các loại gòi nào
+# hỏi lượt xem thể loại theo tuần
+- intent: ask_view_week #(intent 5)
+  examples: |
+    - thể loại phim có lượt xem cao nhất tuần
+    - loại phim có lượt xem nhiều nhất tuần
+    - thể loại phim có lượt xem nhiều trong tuần
+    - loại phim có lượt xem nhiều trong tuần
+
+#hỏi các bộ phim hay gần đây
+- intent: ask_near_best_film #(intent 6)
+  examples: |
+    - một vài bộ phim hay gần đây
+    - người ta xem phim gì gần đây
+    - người ta đang xem phim gì hiện nay
+    - người ta đang xem phim gì bây giờ
+    - phim nào được xem gần đây
+    - phim hay gần đây
+    - phim hay xem gần đây
+    - phim người hay xem gần đây
+    - phim gần đây
+    - đề xuất cho tôi 1 số bộ phim
+    - đề xuất phim
+    - đề xuất
+    - phim hay tháng
+    - phim hay của tháng
+
+
+# hỏi cách xem phim
+- intent: ask_watch_film #(intent 7)
+  examples: |
+    - chỉ tôi quy trình xem phim
+    - chỉ tôi cách xem phim với
+    - có thể hướng dẫn tôi cách xem phim
+    - xem phim bằng cách nào
+    - hướng dẫn vài cách xem phim được không
+    - quy trình đăng ký xem phim
+    - làm thế nào để xem một bộ phim
+    - làm thế nào để xem phim
+    - làm thế nào để xem 1 phim
+    - đăng ký xem phim
+    - hướng dẫn xem phim
+    - chỉ tôi cách xem phim
+    - xem phim như thế nào
+    - xem phim làm sao
+# hỏi thông tin công ty
+- intent: ask_info_company #(intent 8)
+  examples: |
+    - địa chỉ công ty ở đâu
+    - thông tin về công ty
+    - công ty như thế nào
+    - công hoạt động gì
+    - địa chỉ ở đâu
+    - nơi công ty
+#quên mật khẩu
+- intent: ask_forget_password #(intent 9)
+  examples: |
+    - quên mật khẩu
+    - bị quên mật khẩu
+    - không nhớ mật khẩu
+    - sai mật khẩu
+    - mất mật khẩu
+    - không nhớ mật khẩu
+    - chết rồi tôi quên mật khẩu
+    - không nhớ mật khẩu rồi làm sao đây
+    - mật khẩu là cái gì ta
+    - bạn có nhớ mật khẩu của tôi không
+#hết hạn tài khoản
+- intent: ask_price_date #(intent 10)
+  examples: |
+    - tôi bị hết hạn gói
+    - gói tôi mua hết hạn rồi
+    - hết hạn rồi
+    - tôi hết hạn gói
+    - chỉ tôi với gói tôi mua hết hạn
+    - chỉ tôi mua gói mới với
+    - chỉ tôi mua gói mới đi gói tôi mua hết hạn rồi
+    - gói tôi mua bị hết hạn rồi nè
+    - làm sao giờ gói mua hết hạn rồi
+    - tôi muốn gia hạn gói
+    - tôi muốn mua gói mới
+
+#hỏi thông tin tài khoản
+- intent: ask_info_acc #(intent 11)
+  examples: |
+    - thông tin tài khoản tôi ở đâu
+    - làm sao biết tôi mua gói nào
+    - cho tôi xem thông tin gói tôi đã mua
+    - xem thông tin của tôi ở đâu
+    - cho tôi xem thông tin của tôi
+    - cho tôi đổi ảnh đại diện
+    - cho tôi đổi avt
+    - cho tôi đổi avatar
+    - tôi muốn đổi thông tin
+    - đổi thông tin
+    - đổi ảnh đại diện
+    - đổi avt
+    - đổi mật khẩu
+    - tôi muốn đổi mật khẩu
+
+#hỏi phân loại phim
+- intent: ask_type_film #(intent 12)
+  examples: |
+    - lọc phim theo thể loại ở đâu
+    - phân loại phim
+    - tôi muốn xem phim theo loại
+    - tôi muốn xem phim theo quốc gia
+    - làm sao để xem phim theo loại
+    - làm sao để xem phim theo quốc gia
+    - làm sao xem phim theo năm
+    - xem phim theo thể loại
+    - xem phim theo quốc gia
+    - xem phim theo năm
+    - tôi muốn lọc phim
+    - tôi muốn tìm phim tổng quan
+
+
+#hỏi các câu hỏi thường gặp
+- intent: ask_faq #(intent 13)
+  examples: |
+    - tôi có một số thắc mắc
+    - tôi có thắc mắc khác
+    - tôi không hỏi vậy mà hỏi khác
+    - cho tôi hỏi mấy câu khác đi
+    - tôi không rõ lắm
+    - tôi không hiểu lắm
+    - hỏi cái
+    - hỏi cái nè
+    - thắc mắc
+
+#hỏi đang ký tài khoản
+- intent: ask_si_up #(intent 14)
+  examples: |
+    - tôi muốn đăng ký tài khoản
+    - đăng ký tài khoản
+    - đăng ký
+    - tạo tài khoản làm sao
+    - tạo tài khoản thế nào
+    - làm thế nào tạo tài khoản
+    - tôi không biết tạo tài khoản
+    - chỉ tôi tạo tài khoản đi
+    - tạo tài khoản ở đâu vậy
+    - đăng ký tài khoản ở đâu vậy
+    - đăng ký tài khoản làm sao
+    - đăng ký tài khoản chỗ nào vậy
+
+
+#hỏi thông tin popcorn
+- intent: ask_popcorn #(intent 15)
+  examples: |
+    - tôi muốn biết thêm về trang web của bạn
+    - tôi muốn biết thêm về trang web này
+    - thông tin thêm về trang web này
+    - thông tin thêm về trang của bạn
+    - popcorn là trang web như thế nào
+    - cho tôi xin ít thông tin thêm về trang của bạn
+    - trang của bạn có thông tin như thế nào
+    - trang của bạn gồm có thông tin gì
+    - biết thêm về popcorn
+    - thông tin thêm về popcorn
+    - thông tin thêm
+    - một số thông tin
+    - tôi muốn biết thêm
+    
+
+
+# tạm biệt
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - bai
+    - bye bye
+    - bye nhé
+    - bye
+    - chào tạm biệt
+# hỏi đánh giá theo thể loại
+ #(intent 18)
+- intent: ask_rate_genre
+  examples: |
+    - đánh giá của người dùng về phim [kinh dị](theloai_rate)
+    - đánh giá phim [kinh dị](theloai_rate)
+    - đánh giá của người dùng về phim [viễn tưởng](theloai_rate)
+    - đánh giá phim [viễn tưởng](theloai_rate)
+    - đánh giá của người dùng về phim [siêu anh hùng](theloai_rate)
+    - đánh giá phim [siêu anh hùng](theloai_rate)
+    - đánh giá của người dùng về phim [chính kịch](theloai_rate)
+    - đánh giá phim [chính kịch](theloai_rate)
+    - đánh giá của người dùng về phim [hành động](theloai_rate)
+    - đánh giá phim [hành động](theloai_rate)
+    - đánh giá của người dùng về phim [gia đình](theloai_rate)
+    - đánh giá phim [gia đình](theloai_rate)
+    - đánh giá của người dùng về phim [hài](theloai_rate)
+    - đánh giá phim [hài](theloai_rate)
+    - đánh giá của người dùng về phim [gây cấn](theloai_rate)
+    - đánh giá phim [gây cấn](theloai_rate)
+    - đánh giá của người dùng về phim [tình cảm](theloai_rate)
+    - đánh giá phim [tình cảm](theloai_rate)
+    - đánh giá của người dùng về phim [trinh thám](theloai_rate)
+    - đánh giá phim [trinh thám](theloai_rate)
+# - intent: affirm
+#   examples: |
+#     - yes
+#     - y
+#     - indeed
+#     - of course
+#     - that sounds good
+#     - correct
+
+# - intent: deny
+#   examples: |
+#     - no
+#     - n
+#     - never
+#     - I don't think so
+#     - don't like that
+#     - no way
+#     - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+# - intent: mood_unhappy
+#   examples: |
+#     - my day was horrible
+#     - I am sad
+#     - I don't feel very well
+#     - I am disappointed
+#     - super sad
+#     - I'm so sad
+#     - sad
+#     - very sad
+#     - unhappy
+#     - not good
+#     - not very good
+#     - extremly sad
+#     - so saad
+#     - so sad
+
+- intent: bot_challenge
+  examples: |
+    - bạn là ai?
+    - bạn là người máy hả?
+    - có phải tôi đang nói chuyện với bot
+    - bạn là ai?
+    - bạn tên gì
+    - bạn là ai
+    - ai vậy

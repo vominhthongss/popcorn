@@ -1,0 +1,130 @@
+version: "2.0"
+
+stories:
+# hỏi phim theo nội dung 2
+- story: search by movie content
+  steps:
+  - intent: ask_search_by_movie_content #(intent 1)
+  - action: action_search_by_movie_content #(action 1)
+# hỏi phim theo diễn viên 3
+- story: ask search by movie actor
+  steps:
+  - intent: ask_search_by_movie_actor #(intent 2)
+  - action: action_search_by_movie_actor #(action 2)
+
+# hỏi phim theo thể loại hay nhất 4
+- story: ask best film by genre
+  steps:
+  - intent: ask_best_film_by_genre #(intent 3)
+  - action: action_best_film_by_genre #(action 3)
+# hỏi gói xem phim 5
+- story: plan
+  steps:
+  - intent: ask_plan #(intent 4)
+  - action: utter_plan #(utter 4)
+# hỏi lượt xem phim theo tuần 6
+- story: ask viewweek
+  steps:
+  - intent: ask_view_week #(intent 5)
+  - action: action_view_week #(action 5)
+# hỏi xem phim hay gần đây 7
+- story: ask best near film
+  steps:
+  - intent: ask_near_best_film #(intent 6)
+  - action: action_near_best_film #(intent 6)
+
+# hỏi cách xem phim 8
+- story: ask watch film
+  steps:
+  - intent: ask_watch_film #(intent 7)
+  - action: utter_watch_film #(utter 7)
+
+# hỏi thông tin công ty 9
+- story: ask info company
+  steps:
+  - intent: ask_info_company #(intent 8)
+  - action: utter_info_company #(utter 8)
+
+# hỏi quên mật khẩu 10
+- story: ask forget pasword
+  steps:
+  - intent: ask_forget_password #(intent 9)
+  - action: utter_forget_password #(utter 9)
+
+# hỏi hết hạn gói 11
+- story: ask price date
+  steps:
+  - intent: ask_price_date #(intent 10)
+  - action: utter_price_date #(utter 10)
+
+# hỏi thông tin 12
+- story: ask info acc
+  steps:
+  - intent: ask_info_acc #(intent 11)
+  - action: utter_info_acc #(utter 11)
+
+# hỏi phân loại phim 13
+- story: ask type film
+  steps:
+  - intent: ask_type_film #(intent 12)
+  - action: utter_type_film #(utter 12)
+
+# hỏi các câu hỏi thường gặp 14
+- story: ask faq
+  steps:
+  - intent: ask_faq #(intent 13)
+  - action: utter_faq #(utter 13)
+
+# hỏi đăng ký tài khoản 15
+- story: ask si up
+  steps:
+  - intent: ask_si_up #(intent 14)
+  - action: utter_si_up #(utter 14)
+# hỏi thông tin thêm 16
+- story: ask popcorn
+  steps:
+  - intent: ask_popcorn #(intent 15)
+  - action: utter_popcorn #(utter 15)
+
+# hỏi đánh giá theo thể loại
+- story: ask rate genre
+  steps:
+  - intent: ask_rate_genre #(intent 18)
+  - action: action_rate_genre #(action 7)
+
+
+
+# chào hỏi 1
+
+- story: happy greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+# tạm biệt 17
+- story: good bye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye

@@ -1,0 +1,110 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  # - affirm
+  # - deny
+  - mood_great
+  # - mood_unhappy
+  - bot_challenge
+  - ask_search_by_movie_content #(intent 1)
+  - ask_search_by_movie_actor #(intent 2)
+  - ask_best_film_by_genre #(intent 3)
+  - ask_plan #(intent 4)
+  - ask_view_week #(intent 5)
+  - ask_near_best_film #(intent 6)
+  - ask_watch_film #(intent 7)
+  - ask_info_company #(intent 8)
+  - ask_forget_password #(intent 9)
+  - ask_price_date #(intent 10)
+  - ask_info_acc #(intent 11)
+  - ask_type_film #(intent 12)
+  - ask_faq #(intent 13)
+  - ask_si_up #(intent 14)
+  - ask_popcorn #(intent 15)
+  - ask_rate_genre #(intent 18)
+  
+  
+
+actions:
+  - action_hello_world
+  - action_search_by_movie_content #(action 1)
+  - action_search_by_movie_actor #(action 2)
+  - action_best_film_by_genre #(action 3)
+  - action_view_week #(action 5)
+  - action_near_best_film #(action 6)
+  - action_rate_genre #(action 7)
+  - action_default_fallback
+  
+entities:
+  - phim_cag
+  - theloai_rate
+
+slots:
+  phim_cag:
+    type: text
+    influence_conversation: false
+  theloai_rate:
+    type: text
+    influence_conversation: false
+
+responses:
+
+  utter_plan: #(utter 4)
+  - text: "Có 3 gói cụ thể bạn có xem liên kết: http://127.0.0.1:8000" 
+
+  utter_watch_film: #(utter 7)
+  - text: "Bạn nhấn vào liên kết này để tạo tài khoản ạ: http://127.0.0.1:8000/signup sau đó vào đây, xem liên kết: http://127.0.0.1:8000 chọn gói phim. Rồi chọn 1 bộ phim bất kì để xem"
+  
+  utter_info_company: #(utter 8)
+  - text: "Công ty xem phim trực tuyến PopCorn tọa lạc trên đường Ba Tháng Hai, phường Xuân Khánh, quận Ninh Kiều, TP. Cần Thơ, số liên hệ: 0376347325, email: support@popcorn.com"
+  
+  utter_forget_password: #(utter 9)
+  - text: "Hãy vào đây nhập email của bạn để đặt lại mật khẩu: http://127.0.0.1:8000/forgot"
+
+  utter_price_date: #(utter 10)
+  - text: "Nếu hết hạn bạn hãy vào đây: http://127.0.0.1:8000 để mua gói mới tiếp tục xem phim nhé :3"
+
+  utter_info_acc: #(utter 11)
+  - text: "Hãy vào đây: http://127.0.0.1:8000/info để xem nhé"
+ 
+  utter_type_film: #(utter 12)
+  - text: "Hãy vào đây: http://127.0.0.1:8000/catalog để xem nhé có rất nhiều để lựa chọn"
+
+  utter_faq: #(utter 13)
+  - text: "Hãy vào đây: http://127.0.0.1:8000/faq để xem các câu hỏi thường gặp nhé"
+
+  utter_si_up: #(utter 14)
+  - text: "Hãy vào đây: http://127.0.0.1:8000/signup để đăng ký tài khoản"
+
+  utter_popcorn: #(utter 15)
+  - text: "Hãy vào đây: http://127.0.0.1:8000/about để xem một số thông tin của web"
+
+
+
+  utter_greet:
+  - text: "Dạ chào bạn !"
+  - text: "Rất vui vì được hỗ trợ bạn !"
+  - text: "Xin chào, hân hạnh được phục vụ quý khách !"
+  - text: "Bạn có gì thắc mắc cứ hỏi tôi !"
+
+  # utter_cheer_up:
+  # - text: "Bạn có thể xem cái này:"
+  #   image: "https://static1.ohman.vn/YanNews/2167221/201903/ly-thuyet-giai-ma-poster-avengers-end-game-20190314-091700.jpg"
+
+  utter_did_that_help:
+  - text: "Tôi đã giúp bạn chưa?"
+
+  utter_happy: 
+  - text: "Tôi rất vui khi được giúp bạn !"
+
+  utter_goodbye:
+  - text: "Tạm biệt"
+
+  utter_iamabot:
+  - text: "Tôi là Bé Bắp, được tạo bởi Rasa. Do bạn Võ Minh Thông xây dựng ! 😀"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
